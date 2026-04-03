@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/aura/static/css/main.b635b05d.css",
+    "main.js": "/aura/static/js/main.328271b5.js",
+    "static/media/cover8.png": "/aura/static/media/cover8.62064ed7625df15092d5.png",
+    "static/media/cover5.png": "/aura/static/media/cover5.2e1f1b8d10f76d061f09.png",
+    "static/media/cover4.png": "/aura/static/media/cover4.b812056e594ef2c168a1.png",
+    "static/media/cover7.png": "/aura/static/media/cover7.4bcb11b99174a199b122.png",
+    "static/media/cover1.png": "/aura/static/media/cover1.3ebbfd9f61bc05cd2d22.png",
+    "static/media/cover9.png": "/aura/static/media/cover9.029a4f8ac5bbda95ae8d.png",
+    "static/media/cover10.png": "/aura/static/media/cover10.8d70a4de68fd7a9f417f.png",
+    "static/media/cover3.png": "/aura/static/media/cover3.e0a0deed43f185498536.png",
+    "static/media/cover2.png": "/aura/static/media/cover2.882b7c475248cd04af97.png",
+    "static/media/cover6.png": "/aura/static/media/cover6.49863c46abb5cb0af579.png",
+    "static/media/profile.png": "/aura/static/media/profile.24651b978635aa4380ce.png",
+    "index.html": "/aura/index.html",
+    "main.b635b05d.css.map": "/aura/static/css/main.b635b05d.css.map",
+    "main.328271b5.js.map": "/aura/static/js/main.328271b5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b635b05d.css",
+    "static/js/main.328271b5.js"
+  ]
+}
