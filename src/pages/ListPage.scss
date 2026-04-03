@@ -1,0 +1,79 @@
+@use "../assets/scss/mixin" as m;
+@use "../assets/scss/variables" as v;
+@use "../assets/scss/font" as f;
+
+.list-page {
+  height: 100vh;
+  overflow-y: auto;
+  background: #000;
+  color: #fff;
+
+  /* 🔥 헤더 */
+  .page-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    @include m.flex-layout(row, flex-start, center, 0.5rem);
+    padding: 1rem;
+
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.6);
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .back-btn {
+      @include m.flex-layout;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  .list-wrap {
+    padding: 1rem;
+  }
+
+  .list-item {
+    @include m.flex-layout(row, flex-start, center, 0.8rem);
+    padding: 0.5rem 0;
+    cursor: pointer;
+
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 6px;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    span {
+      font-size: 0.7rem;
+      color: #aaa;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  .empty {
+    text-align: center;
+    margin-top: 2rem;
+    color: #888;
+  }
+}

@@ -1,0 +1,41 @@
+
+// ====================
+// COLOR
+
+// background
+$color-bg: #0a0a0a;
+$color-bg-light: #111111;
+
+// text
+$color-white: #ffffff;
+$color-gray: #a1a1a1;
+$color-gray-light: #666666;
+
+// accent
+$color-primary: #8b5cf6;
+
+// ui
+$color-border: rgba(255, 255, 255, 0.08);
+$color-glass: rgba(255, 255, 255, 0.05);
+
+// ====================
+
+// SPACING
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+//  RADIUS
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 20px;
+
+//  TRANSITION
+$transition-fast: 0.2s ease;
+$transition-default: 0.4s ease;
+$transition-slow: 0.6s ease;
+
+// EFFECT
+$blur: blur(20px);

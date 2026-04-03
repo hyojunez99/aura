@@ -1,0 +1,33 @@
+@use "../../assets/scss/variables" as v;
+@use "../../assets/scss/mixin" as m;
+@use "../../assets/scss/font" as f;
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: v.$color-bg-light;
+  border-top: 1px solid v.$color-border;
+  padding: 0.5rem 0;
+  @include m.flex-layout(row, space-around, center);
+
+  .nav-item {
+    @include m.flex-layout(column, center, center, 0.2rem);
+    color: v.$color-gray;
+    font-size: 12px;
+    transition: v.$transition-default;
+
+    svg {
+      font-size: 24px;
+    }
+
+    &:hover {
+      color: v.$color-white;
+    }
+
+    &.active {
+      color: v.$color-white;
+    }
+  }
+}

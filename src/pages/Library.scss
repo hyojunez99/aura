@@ -1,0 +1,90 @@
+@use "../assets/scss/mixin" as m;
+@use "../assets/scss/variables" as v;
+@use "../assets/scss/font" as f;
+
+#library {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  padding-bottom: 120px;
+  min-height: 100vh;
+  overflow-y: auto;
+
+  .library-section {
+    margin-bottom: 2rem;
+    .section-header {
+      @include m.flex-layout(row, space-between, center);
+      margin-bottom: 1rem;
+      h3 {
+        @include f.font-h3;
+      }
+      button {
+        border: none;
+        color: v.$color-gray;
+        background: v.$color-glass;
+        backdrop-filter: v.$blur;
+        cursor: pointer;
+        span {
+          @include f.font-cap;
+        }
+      }
+    }
+  }
+
+  .grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+
+    span {
+      font-size: 0.7rem;
+      color: #aaa;
+    }
+
+    @include m.tablet {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include m.desktop {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  .card {
+    background: #222;
+    border-radius: 10px;
+    padding: 0.5rem;
+    cursor: pointer;
+    // max-width: 180px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .history-item {
+    @include m.flex-layout(row, flex-start, center, 0.8rem);
+    padding: 0.5rem 0;
+    cursor: pointer;
+
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 6px;
+    }
+
+    span {
+      font-size: 0.7rem;
+      color: #aaa;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use "../assets/scss/mixin" as m;
+@use "../assets/scss/variables" as v;
+@use "../assets/scss/font" as f;
+
+#home {
+  padding: 1rem;
+  padding-bottom: 120px;
+  min-height: 100vh;
+  overflow-y: auto;
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+}

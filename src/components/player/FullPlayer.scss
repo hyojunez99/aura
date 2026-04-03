@@ -1,0 +1,155 @@
+@use "../../assets/scss/mixin" as m;
+@use "../../assets/scss/variables" as v;
+@use "../../assets/scss/font" as f;
+
+.full-player {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(17, 17, 17, 0.85);
+  backdrop-filter: blur(20px);
+  color: #fff;
+  z-index: 9999;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateY(100%);
+  animation: slideUp 0.4s ease forwards;
+
+  .down-btn {
+    @include m.flex-layout(row, flex-start, center);
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .content {
+    @include m.flex-layout(column, center, center, 1.5rem);
+    text-align: center;
+    margin-top: 3rem;
+
+    img {
+      width: 70%;
+      max-width: 300px;
+      border-radius: 16px;
+    }
+
+    .sing-info {
+      @include m.flex-layout(column, center, center, 0.5rem);
+
+      h2 {
+        @include f.font-h3;
+      }
+
+      p {
+        @include f.font-body;
+        color: #aaa;
+      }
+    }
+
+    .function {
+      @include m.flex-layout(row, space-around, center, 1rem);
+      margin-top: 1.5rem;
+
+      .function-btn {
+        @include m.flex-layout(row, center, center, 0.5rem);
+        padding: 0.5rem 1.5rem;
+        border-radius: 12px;
+        border: none;
+        background: #222;
+        color: #aaa;
+        cursor: pointer;
+        transition: v.$transition-default;
+
+        svg {
+          font-size: 18px;
+        }
+
+        span {
+          font-size: 0.7rem;
+        }
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+          color: #fff;
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
+
+        &.active {
+          color: #1db954;
+          background: rgba(29, 185, 84, 0.15);
+        }
+      }
+    }
+  }
+
+  .progress-wrap {
+    width: 100%;
+    @include m.flex-layout(row, center, center, 0.5rem);
+
+    margin-top: 2rem;
+
+    span {
+      font-size: 0.7rem;
+      color: #aaa;
+      width: 35px;
+      text-align: center;
+    }
+
+    input {
+      flex: 1;
+      appearance: none;
+      height: 3px;
+      background: #555;
+      border-radius: 10px;
+
+      &::-webkit-slider-thumb {
+        appearance: none;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #fff;
+      }
+    }
+  }
+
+  .control {
+    @include m.flex-layout(row, center, center, 0.5rem);
+    margin-top: 2rem;
+
+    .icon-btn {
+      @include m.flex-layout(row, center, center);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #222;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      transition: v.$transition-default;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+  }
+}

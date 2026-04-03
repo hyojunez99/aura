@@ -1,0 +1,46 @@
+@use "../../assets/scss/mixin" as m;
+@use "../../assets/scss/variables" as v;
+@use "../../assets/scss/font" as f;
+
+.track-item {
+  @include m.flex-layout(row, space-between, center);
+
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+
+  .track-left {
+    @include m.flex-layout(row, flex-start, center, 0.8rem);
+  }
+
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+  }
+
+  .track-info {
+    .title {
+      @include f.font-BL;
+    }
+
+    .artist {
+      @include f.font-body;
+      color: v.$color-gray;
+    }
+  }
+
+  .icon-btn {
+    @include m.flex-layout;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+
+    color: v.$color-white;
+    background: v.$color-glass;
+    backdrop-filter: v.$blur;
+
+    font-size: 18px;
+    cursor: pointer;
+  }
+}

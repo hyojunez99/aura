@@ -1,0 +1,76 @@
+@use "../assets/scss/mixin" as m;
+@use "../assets/scss/variables" as v;
+
+#profile {
+  padding: 2rem 1rem;
+  color: #fff;
+
+  .profile-top {
+    @include m.flex-layout(column, center, center, 0.5rem);
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+  }
+
+  .profile-stats {
+    @include m.flex-layout(row, space-around, center);
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+
+    .stat {
+      text-align: center;
+
+      p {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      span {
+        font-size: 0.7rem;
+        color: #aaa;
+      }
+    }
+  }
+
+  .profile-menu {
+    margin-top: 2rem;
+
+    button {
+      @include m.flex-layout(row, flex-start, center, 1rem);
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      background: none;
+      color: #fff;
+      border-bottom: 1px solid #222;
+      cursor: pointer;
+
+      span {
+        font-size: 0.9rem;
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+    }
+
+    .logout {
+      color: #ff4d4d;
+    }
+  }
+}

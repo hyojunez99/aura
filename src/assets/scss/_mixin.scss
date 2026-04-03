@@ -1,0 +1,24 @@
+// 태블릿
+$tablet: 768px;
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+// 데스크탑
+$desktop: 1024px;
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+//레이아웃 플렉스
+@mixin flex-layout($dir: row, $just: center, $align: center, $gap: 0) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+  gap: $gap;
+}

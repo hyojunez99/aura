@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Blinding Lights",
+    "artist": "The Weeknd",
+    "cover": "cover1.png",
+    "audio": "song.mp3"
+  },
+  {
+    "id": 2,
+    "title": "Levitating",
+    "artist": "Dua Lipa",
+    "cover": "cover2.png",
+    "audio": "song.mp3"
+  },
+  {
+    "id": 3,
+    "title": "Peaches & Cream (feat. Daniel Caesar)",
+    "artist": "Justin Bieber",
+    "cover": "cover3.png",
+    "audio": "song.mp3"
+  },
+  {
+    "id": 4,
+    "title": "Watermelon Sugar",
+    "artist": "Harry Styles",
+    "cover": "cover4.png",
+    "audio": "song.mp3"
+  },
+  {
+    "id": 5,
+    "title": "Stay",
+    "artist": "The Kid LAROI & Justin Bieber",
+    "cover": "cover5.png",
+    "audio": "song.mp3"
+  },
+  {
+    "id": 6,
+    "title": "As It Was",
+    "artist": "Harry Styles",
+    "cover": "cover6.png",
+    "audio": "song.mp3"
+  },
+  {
+    "id": 7,
+    "title": "Good 4 U",
+    "artist": "Olivia Rodrigo",
+    "cover": "cover7.png",
+    "audio": "song.mp3"
+  },
+  {
+    "id": 8,
+    "title": "Circles",
+    "artist": "Post Malone",
+    "cover": "cover8.png",
+    "audio": "song.mp3"
+  },
+  {
+    "id": 9,
+    "title": "Save Your Tears (Remix)",
+    "artist": "The Weeknd & Ariana Grande",
+    "cover": "cover9.png",
+    "audio": "song.mp3"
+  },
+  {
+    "id": 10,
+    "title": "Bad Habits",
+    "artist": "Ed Sheeran",
+    "cover": "cover10.png",
+    "audio": "song.mp3"
+  }
+]

@@ -1,0 +1,104 @@
+@use "../../assets/scss/font" as f;
+@use "../../assets/scss/variables" as v;
+@use "../../assets/scss/mixin" as m;
+
+header {
+  @include m.flex-layout(row, space-between, center);
+  padding: v.$spacing-md;
+
+  .header-logo {
+    @include m.flex-layout(row, center, center, 0.5rem);
+    cursor: pointer;
+
+    img {
+      width: 36px;
+      height: 36px;
+    }
+
+    h1 {
+      @include f.font-h3;
+      font-weight: 700;
+    }
+  }
+
+  .header-right {
+    @include m.flex-layout(row, center, center, 0.5rem);
+
+    position: relative;
+
+    .icon-btn {
+      @include m.flex-layout;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: none;
+      color: v.$color-white;
+      background: v.$color-glass;
+      backdrop-filter: v.$blur;
+      font-size: 18px;
+      transition: v.$transition-default;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+      .badge {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        background: red;
+        color: #fff;
+        font-size: 10px;
+        padding: 2px 6px;
+        border-radius: 10px;
+      }
+    }
+
+    .noti-wrap {
+      position: relative;
+    }
+
+    .noti-dropdown {
+      position: absolute;
+      top: 110%;
+      right: 0;
+
+      width: 240px;
+      padding: 1rem;
+      border-radius: 12px;
+
+      background: v.$color-glass;
+      backdrop-filter: v.$blur;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      z-index: 999;
+
+      .title {
+        @include f.font-cap;
+        margin-bottom: 0.8rem;
+        color: v.$color-gray;
+      }
+
+      .noti-item {
+        font-size: 0.8rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.08);
+          padding-left: 4px;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

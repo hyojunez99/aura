@@ -1,0 +1,72 @@
+@use "../assets/scss/mixin" as m;
+
+#search {
+  padding: 1rem;
+  padding-bottom: 120px;
+  color: #fff;
+
+  /* 🔍 검색바 */
+  .search-bar {
+    margin-bottom: 1.5rem;
+
+    input {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border-radius: 10px;
+      border: none;
+      background: #222;
+      color: #fff;
+      font-size: 0.9rem;
+
+      &:focus {
+        outline: none;
+        background: #333;
+      }
+    }
+  }
+
+  /* 🎧 결과 */
+  .search-result {
+    h3 {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+
+      @include m.tablet {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @include m.desktop {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .card {
+        background: #222;
+        padding: 0.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          border-radius: 8px;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .empty {
+      text-align: center;
+      margin-top: 2rem;
+      color: #888;
+    }
+  }
+}

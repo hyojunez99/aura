@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# Portfolio Main Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. 프로젝트 소개
 
-## Available Scripts
+- **설명:**  
+  음악 스트리밍 서비스 컨셉의 웹 애플리케이션으로, 사용자가 음악을 탐색하고 재생할 수 있으며, 좋아요 및 저장 기능을 통해 자신만의 라이브러리를 쉽게 구축할 수 있도록 구현했습니다.  
+  특히 MiniPlayer와 FullPlayer 구조를 적용해 실제 서비스처럼 자연스러운 사용자 경험을 제공하는 데 주안점을 두었습니다.
 
-In the project directory, you can run:
+- **진행 기간:** 2026.03.31 ~ 2026.04.03 (4일)
+- **개발 인원:** 개인 프로젝트
+- **배포 링크:** (추후 입력)
+- **GitHub:** (추후 입력)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 2. 사용 기술 스택 (Tech Stack)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend:** JavaScript (ES6+), React.js, SCSS
+- **Data Handling:** Mock JSON
+- **Design Tools:** Figma
+- **Version Control & Tools:** Git, GitHub
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 3. 기획 및 디자인 (Planning & Design)
 
-### `npm run build`
+- **컨셉:**  
+  "Aura"라는 음악 앱을 모티프로 삼아, 감성적인 UI와 직관적인 UX 구현을 목표로 설계하였습니다. MiniPlayer에서 FullPlayer로 자연스럽게 확장되는 구조를 중심으로 실제 음악 앱에서 경험할 수 있는 흐름을 재현하였습니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Tool:** Figma
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **주요 활동:**
+  - 전체 UI 구조 설계 (Header / Player / Navigation)
+  - 사용자 흐름 정의 (검색 → 재생 → 저장 → 라이브러리)
+  - 반응형 레이아웃 설계 (모바일 / 태블릿 / 데스크탑)
+  - 음악 데이터 구조(JSON) 설계
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 4. 디렉토리 구조
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```text
+src
+│
+├── assets
+│   ├── audio            # 실제 재생에 사용되는 음악 파일(mp3)
+│   ├── data             # 음악 리스트(JSON) 및 더미 데이터 관리
+│   ├── images           # 앨범 커버 및 UI 이미지
+│   └── scss             # 전역 스타일 (변수, 믹스인, 폰트 정의)
+│
+├── components
+│   │
+│   ├── layout           # 공통 레이아웃 컴포넌트
+│   │
+│   ├── player           # 음악 재생 관련 컴포넌트
+│   │
+│   └── playlist         # 음악 리스트 UI
+│
+├── hook                 # 커스텀 훅 확장 대비 (현재는 구조만 구성)
+│
+├── pages
+│   ├── Home             # 전체 음악 리스트 및 추천 영역
+│   ├── Library          # 좋아요 / 저장 / 히스토리 통합 페이지
+│   ├── Search           # 음악 검색 페이지
+│   ├── Profile          # 사용자 정보 및 통계 페이지
+│   ├── LikedPage        # 좋아요 목록 상세 페이지
+│   └── SavedPage        # 저장된 음악 목록 페이지
+│
+├── App.jsx              # 전역 상태 관리 (현재 곡, 재생 상태, 인덱스 등)
+│                        # 라우팅 및 플레이어 상태 흐름 제어
+│
+└── index.js             # React 앱 진입점
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 5. 담당 역할
 
-## Learn More
+- **기획 및 디자인**
+  - 전체 레이아웃, UI/UX 설계, 반응형 구조 설계, 프로젝트 데이터 구조 설계
+- **개발:**
+  - React 기반 컴포넌트 구조 설계
+  - MiniPlayer / FullPlayer 상태 공유 및 제어
+  - 음악 재생 기능 (audio API 활용)
+  - 검색 기능 (필터링)
+  - 좋아요 / 저장 / 히스토리 기능 구현
+  - localStorage를 활용한 데이터 유지
+  - 반응형 UI 구현 (SCSS mixin 활용)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 6. 주요 기능
 
-### Code Splitting
+- 음악 재생 (Play / Pause / Next / Prev)
+- MiniPlayer ↔ FullPlayer 전환
+- 실시간 검색 기능
+- 좋아요 기능 (Library 연동)
+- 저장 기능 (Playlist 개념)
+- 최근 재생 히스토리
+- 알림 드롭다운 UI
+- 프로필 통계 (좋아요 수 / 저장 수 / 총 재생 시간)
+- 반응형 UI 지원
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 7. 트러블 슈팅
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **문제 1:** 각 컴포넌트에서 상태를 따로 관리해 음악 재생 상태가 일관성 있게 유지되지 않는 문제가 발생함.
+  - **해결:** App.jsx에서 currentTrack, currentIndex, isPlaying을 전역 상태로 통합해 관리하고, 필요한 컴포넌트에 props로 전달하여 상태 흐름을 일관되게 유지함.
 
-### Making a Progressive Web App
+- **문제 2:** 좋아요 및 저장 데이터가 새로고침 후에도 유지되지 않는 문제가 발생함.
+  - **해결:** localStorage를 활용해 상태의 초기값을 불러오고, 상태가 변경될 때마다 함께 저장하도록 구현함.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **문제 3:** 저작권 이슈로 인해 실제 음원 파일을 프로젝트에 포함하지 못하는 상황이 발생함.
+  - **해결:** 테스트용 로컬 음원은 별도로 분리하여 개발에 활용하고, 배포 시에는 오디오 파일이 없어도 프로그램이 정상 작동할 수 있도록 구조를 설계함.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 8. 인사이트 (Insights)
 
-### Deployment
+- 컴포넌트 간 상태 관리는 상위 컴포넌트에서 일괄적으로 처리할 때 구조가 더욱 안정적임을 직접 경험했다.
+- 단순히 UI를 구현하는 것에서 나아가, 사용자 경험(UX) 흐름을 설계하는 과정이 프로젝트의 핵심이라는 점을 깨달았다.
+- localStorage를 활용한 데이터 유지 방식에 대한 이해도가 높아졌다.
+- 실제 서비스의 구조를 참고해 프로젝트를 설계하면서, 전반적인 설계 역량이 한층 강화되었다.
+- 반응형 설계 과정에서 UI 확장성과 데이터 수 제한의 필요성을 몸소 느꼈다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 9. 참고 사항
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 본 프로젝트에 사용된 음악 파일은 저작권 문제를 고려해 실제 음원을 포함하지 않았다.
+- 오디오 파일은 샘플 또는 로컬 환경에서 테스트용으로만 활용되었으며, 배포 시에는 제외했다.
+- 대신 UI와 주요 기능 구현(재생, 상태 관리, 플레이어 로직)에 집중하여 개발을 진행했다.

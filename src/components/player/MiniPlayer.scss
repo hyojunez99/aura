@@ -1,0 +1,100 @@
+@use "../../assets/scss/mixin" as m;
+@use "../../assets/scss/variables" as v;
+@use "../../assets/scss/font" as f;
+
+.mini-player {
+  position: fixed;
+  bottom: 70px;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: #111;
+  border-top: 1px solid #333;
+
+  .progress-wrap {
+    width: 100%;
+    @include m.flex-layout(row, center, center, 0.5rem);
+
+    span {
+      font-size: 0.7rem;
+      color: #aaa;
+      width: 35px;
+      text-align: center;
+    }
+
+    input {
+      flex: 1;
+      appearance: none;
+      height: 3px;
+      background: #555;
+      border-radius: 10px;
+
+      &::-webkit-slider-thumb {
+        appearance: none;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #fff;
+      }
+    }
+  }
+
+  .sing-info {
+    @include m.flex-layout(row, space-between, center, 0.5rem);
+
+    .left {
+      @include m.flex-layout(row, flex-start, center, 0.5rem);
+
+      margin: 1rem 0;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+      }
+
+      .info {
+        .title {
+          font-size: 0.9rem;
+        }
+
+        .artist {
+          font-size: 0.7rem;
+          color: #aaa;
+        }
+      }
+    }
+    .right {
+      .up-btn {
+        @include m.flex-layout(row, flex-start, center);
+        font-size: 28px;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .control {
+    @include m.flex-layout(row, center, center, 0.5rem);
+    margin-top: 0.5rem;
+
+    .icon-btn {
+      @include m.flex-layout(row, center, center);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #222;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      transition: v.$transition-default;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+    }
+  }
+}
