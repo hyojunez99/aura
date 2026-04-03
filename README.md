@@ -8,8 +8,8 @@
 
 - **진행 기간:** 2026.03.31 ~ 2026.04.03 (4일)
 - **개발 인원:** 개인 프로젝트
-- **배포 링크:** (추후 입력)
-- **GitHub:** (추후 입력)
+- **배포 링크:** [Portfolio Main](https://hyojunez99.github.io/aura/)
+- **GitHub:** [Repository Link](https://github.com/hyojunez99/aura.git)
 
 ---
 
